@@ -4,7 +4,6 @@ terraform {
     key                     = "demo.tfstate"
     region                  = "us-east-1"
     dynamodb_table          = "s3-state-lock"
-    shared_credentials_file = "$HOME/.aws/credentials"
     profile                 = "lasandbox"
   }
 }
