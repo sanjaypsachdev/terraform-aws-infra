@@ -1,6 +1,6 @@
 variable "shared_credentials_file" {
   type = string
-  default = "/home/ssachdev/.aws/credentials"
+  default = "$HOME/.aws/credentials"
 }
 
 variable "profile" {
