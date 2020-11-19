@@ -8,12 +8,12 @@ terraform {
 }
 
 provider "aws" {
-  region                  = "us-east-1"
-  profile                 = "lasandbox"
+  region  = "us-east-1"
+  profile = "lasandbox"
 }
 
 provider "aws" {
-  alias                  = "oregon-region"
-  region                  = "us-west-2"
-  profile                 = "lasandbox"
+  alias   = "oregon-region"
+  region  = "us-west-2"
+  profile = "lasandbox"
 }
