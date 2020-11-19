@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "aws" {
-  region                  = "us-east-1"
-  profile                 = "lasandbox"
+  region  = "us-east-1"
+  profile = "lasandbox"
 }
 
 resource "aws_instance" "myec2" {
@@ -25,14 +25,14 @@ resource "aws_instance" "myec2" {
   }
 
   provisioner "remote-exec" {
-    when   = create
+    when = create
     inline = [
       "sudo yum -y install nano"
     ]
   }
 
   provisioner "remote-exec" {
-    when   = destroy
+    when = destroy
     inline = [
       "sudo yum -y remove nano"
     ]

@@ -8,11 +8,11 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
-  profile                 = "lasandbox"
+  region  = "us-east-1"
+  profile = "lasandbox"
 }
 
 resource "aws_instance" "myec2" {
-  ami = var.amis[var.index]
+  ami           = var.amis[var.index]
   instance_type = var.instances[var.region]
 }

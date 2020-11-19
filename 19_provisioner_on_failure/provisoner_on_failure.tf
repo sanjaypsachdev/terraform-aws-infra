@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "aws" {
-  region                  = "us-east-1"
-  profile                 = "lasandbox"
+  region  = "us-east-1"
+  profile = "lasandbox"
 }
 
 resource "aws_instance" "myec2" {
@@ -27,7 +27,7 @@ resource "aws_instance" "myec2" {
   provisioner "remote-exec" {
     when       = create
     on_failure = continue
-    inline     = [
+    inline = [
       "sudo yum -y install nano12345"
     ]
   }

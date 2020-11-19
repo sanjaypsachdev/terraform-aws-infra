@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "aws" {
-  region                  = "us-east-1"
-  profile                 = "lasandbox"
+  region  = "us-east-1"
+  profile = "lasandbox"
 }
 
 resource "aws_security_group" "dynamicsg" {
@@ -29,7 +29,7 @@ resource "aws_security_group" "dynamicsg" {
 
   dynamic "egress" {
     for_each = var.sg_ports
-  
+
     content {
       from_port   = egress.value
       to_port     = egress.value

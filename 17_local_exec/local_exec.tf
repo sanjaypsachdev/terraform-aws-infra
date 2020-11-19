@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "aws" {
-  region                  = "us-east-1"
-  profile                 = "lasandbox"
+  region  = "us-east-1"
+  profile = "lasandbox"
 }
 
 resource "aws_instance" "myec2" {

@@ -1,10 +1,10 @@
 variable "shared_credentials_file" {
-  type = string
+  type    = string
   default = "$HOME/.aws/credentials"
 }
 
 variable "profile" {
-  type = string
+  type    = string
   default = "lasandbox"
 }
 
